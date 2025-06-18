@@ -1,4 +1,5 @@
 # Hotel-Booking-Website
+<<<<<<< HEAD
 
 ## Overview
 Hotel Booking Website is a full-stack web application consisting of a backend built with Node.js and Express, and a frontend developed using React and Vite. The backend handles API requests, authentication, and database operations, while the frontend provides a user-friendly interface for interacting with the application.
@@ -62,3 +63,6 @@ Hotel Booking Website is a full-stack web application consisting of a backend bu
 
 ## License
 This project is licensed under the ISC License.
+=======
+"Hotel Booking Website is a full-stack web application for managing hotel bookings, featuring a React-based frontend and a Node.js/Express backend with MongoDB integration."
+>>>>>>> 5cfc0bd160a3233badefbad9272f5488ecec7a88
