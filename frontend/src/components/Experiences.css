@@ -1,0 +1,85 @@
+/* ExperiencesPage.css */
+.experiences-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.experiences-page h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.experiences-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.loading, .error-message {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 50px;
+}
+
+/* Experience.css */
+.experience-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+}
+
+.experience-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.experience-details {
+    padding: 15px;
+}
+
+.experience-title {
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.experience-location {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.experience-description {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.experience-price {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ff385c;
+}
+
+.experience-link {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #ff385c;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.experience-link:hover {
+    background-color: #e31c5f;
+}
