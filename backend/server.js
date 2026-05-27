@@ -22,9 +22,11 @@ const jwtSecret = process.env.JWT_SECRET || 'your_jwt_secret';
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
-
 app.use(cors({
-    origin: 'https://hotel-booking-website-zeta-lyart.vercel.app',
+    origin: [
+        'http://localhost:5173',
+        'https://hotel-booking-website-zeta-lyart.vercel.app'
+    ],
     credentials: true,
 }));
 
@@ -366,7 +368,7 @@ app.post('/upload', upload.array('photos', 100), (req, res) => {
             uploadedFiles.push(path.basename(newPath));
         }
 
-        const fileUrls = uploadedFiles.map(file => `http://localhost:3000/uploads/${file}`);
+        const fileUrls = uploadedFiles.map(file => `https://jam-cyus.onrender.com/uploads/${file}`);
 
         res.json(fileUrls);
     } catch (error) {
@@ -386,7 +388,7 @@ app.post('/upload-by-link', async (req, res) => {
             dest: destPath,
         });
 
-        const fullUrl = `http://localhost:3000/uploads/${newName}`;
+        const fullUrl = `https://jam-cyus.onrender.com/uploads/${newName}`;
         res.json(fullUrl);
     } catch (error) {
         console.error('Error downloading image:', error);
