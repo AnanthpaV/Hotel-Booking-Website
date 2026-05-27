@@ -24,7 +24,7 @@ export default function PlacesForm() {
     useEffect(() => {
         if (!id) return;
 
-        axios.get(`http://localhost:3000/places/${id}`)
+        axios.get(`https://jam-cyus.onrender.com/places/${id}`)
             .then(response => {
                 const data = response.data;
                 if (data) {
@@ -96,10 +96,10 @@ async function addNewPlace(ev) {
     try {
         if (id) {
             // Update existing place
-            await axios.put(`http://localhost:3000/places/${id}`, placeData);
+            await axios.put(`https://jam-cyus.onrender.com/places/${id}`, placeData);
         } else {
             // Create a new place
-            await axios.post('http://localhost:3000/places', placeData);
+            await axios.post('https://jam-cyus.onrender.com/places', placeData);
         }
         setRedirect(true); // Redirect to another page after saving
     } catch (error) {

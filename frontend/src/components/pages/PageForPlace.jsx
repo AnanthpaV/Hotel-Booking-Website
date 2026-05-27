@@ -14,7 +14,7 @@ export default function PageForPlace() {
     useEffect(() => {
         if (!id) return;
         axios
-        .get(`http://localhost:3000/places/${id}`)
+        .get(`https://jam-cyus.onrender.com/places/${id}`)
         .then((response) => setPlace(response.data))
         .catch((error) => console.error("Error fetching place:", error));
     }, [id]);

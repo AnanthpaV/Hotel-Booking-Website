@@ -11,7 +11,7 @@ export function UserContextProvider({ children }) {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/profile', { withCredentials: true }); // include withCredentials to send cookies
+                const response = await axios.get('https://jam-cyus.onrender.com/profile', { withCredentials: true }); // include withCredentials to send cookies
                 if (response.data) {
                     setUser(response.data);
                 } else {
@@ -29,7 +29,7 @@ export function UserContextProvider({ children }) {
     }, []);
 
     const logout = async () => {
-        await axios.post('http://localhost:3000/logout', {}, { withCredentials: true });
+        await axios.post('https://jam-cyus.onrender.com/logout', {}, { withCredentials: true });
         setUser(null);
     };
 

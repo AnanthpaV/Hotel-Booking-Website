@@ -31,7 +31,7 @@ export default function SearchResults() {
 
             try {
                 // Fetch search results
-                const response = await axios.get(`http://localhost:3000/api/search`, {
+                const response = await axios.get(`https://jam-cyus.onrender.com/api/search`, {
                     params: {
                         query,
                         checkIn: checkIn ? new Date(checkIn).toISOString() : null,
@@ -45,7 +45,7 @@ export default function SearchResults() {
                 // Fetch nearby places if we have matching results
                 if (response.data.matching.length > 0) {
                     const firstPlace = response.data.matching[0];
-                    const nearbyResponse = await axios.get(`http://localhost:3000/api/nearby`, {
+                    const nearbyResponse = await axios.get(`https://jam-cyus.onrender.com/api/nearby`, {
                         params: { address: firstPlace.address }
                     });
                     setNearbyPlaces(nearbyResponse.data);

@@ -14,7 +14,7 @@ export default function Login() {
     async function HandleLogin(e) {
         e.preventDefault();
         try {
-            const userInfo = await axios.post('http://localhost:3000/login', { email, password }, {
+            const userInfo = await axios.post('https://jam-cyus.onrender.com/login', { email, password }, {
                 withCredentials: true
             });
             if (userInfo.data) {

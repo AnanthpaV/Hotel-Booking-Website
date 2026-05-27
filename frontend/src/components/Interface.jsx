@@ -24,7 +24,7 @@ export default function Interface() {
         setLoading(true);
         setError(null);
         try {
-            const response = await axios.get(`http://localhost:3000/api/search`, {
+            const response = await axios.get(`https://jam-cyus.onrender.com/api/search`, {
                 params: {
                     query: searchQuery,
                     checkIn: checkIn ? checkIn.toISOString() : null,

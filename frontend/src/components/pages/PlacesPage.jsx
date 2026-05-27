@@ -9,14 +9,14 @@ export default function PlacesPage() {
     const [places, setPlaces] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:3000/user-places').then(({ data }) => {
+        axios.get('https://jam-cyus.onrender.com/user-places').then(({ data }) => {
             setPlaces(data);
         });
     }, []);
 
     // Optional: Add a function to re-fetch the places if an update occurs
     function refreshPlaces() {
-        axios.get('http://localhost:3000/places').then(({ data }) => {
+        axios.get('https://jam-cyus.onrender.com/places').then(({ data }) => {
             setPlaces(data);
         });
     }

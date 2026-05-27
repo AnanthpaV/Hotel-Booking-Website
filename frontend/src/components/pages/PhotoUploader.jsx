@@ -13,7 +13,7 @@ export default function PhotoUploader({ addedPhotos = [], onChange, placeId }) {
         const updatedPhotos = [filename, ...addedPhotos.filter(photo => photo !== filename)];
         onChange(updatedPhotos);
 
-        axios.put(`http://localhost:3000/places/${placeId}/photos`, { photos: updatedPhotos })
+        axios.put(`https://jam-cyus.onrender.com/places/${placeId}/photos`, { photos: updatedPhotos })
             .then(() => {
                 console.log('Photos updated successfully');
             })
@@ -30,7 +30,7 @@ export default function PhotoUploader({ addedPhotos = [], onChange, placeId }) {
             data.append('photos', files[i]);
         }
 
-        axios.post('http://localhost:3000/upload', data, {
+        axios.post('https://jam-cyus.onrender.com/upload', data, {
             headers: { 'Content-Type': 'multipart/form-data' }
         })
         .then(response => {
@@ -45,7 +45,7 @@ export default function PhotoUploader({ addedPhotos = [], onChange, placeId }) {
     async function addPhotoByLink(ev) {
         ev.preventDefault();
         try {
-            const { data: filename } = await axios.post('http://localhost:3000/upload-by-link', { link: photoLink });
+            const { data: filename } = await axios.post('https://jam-cyus.onrender.com/upload-by-link', { link: photoLink });
             onChange(prev => [...prev, filename]);
             setPhotoLink('');
         } catch (error) {

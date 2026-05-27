@@ -12,7 +12,7 @@ export default function Register() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.post("http://localhost:3000/register", {
+            const response = await axios.post("https://jam-cyus.onrender.com/register", {
                 name: name,
                 email: email,
                 password: password,

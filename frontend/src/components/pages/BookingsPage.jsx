@@ -14,7 +14,7 @@ export default function BookingsPage() {
 
   // Fetch bookings and ensure status is correctly set
   useEffect(() => {
-    axios.get('http://localhost:3000/bookings')
+    axios.get('https://jam-cyus.onrender.com/bookings')
       .then(response => {
         setBookings(response.data);
       })

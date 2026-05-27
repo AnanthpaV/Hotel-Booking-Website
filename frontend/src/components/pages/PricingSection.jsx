@@ -33,7 +33,7 @@ export default function PricingSection({ place }) {
 
   async function bookThisPlace() {
     try {
-        const response = await axios.post("http://localhost:3000/bookings", {
+        const response = await axios.post("https://jam-cyus.onrender.com/bookings", {
             checkIn,
             checkOut,
             guests,

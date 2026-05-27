@@ -11,7 +11,7 @@ const ExperiencesPage = () => {
     useEffect(() => {
         const fetchExperiences = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/api/experiences');
+                const response = await axios.get('https://jam-cyus.onrender.com/api/experiences');
                 setExperiences(response.data);
                 setLoading(false);
             } catch (error) {

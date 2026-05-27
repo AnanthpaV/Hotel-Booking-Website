@@ -7,7 +7,7 @@ export default function IndexPage() {
     const [places, setPlaces] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:3000/places').then(response => {
+        axios.get('https://jam-cyus.onrender.com/places').then(response => {
         setPlaces(response.data);
         });
     }, []);

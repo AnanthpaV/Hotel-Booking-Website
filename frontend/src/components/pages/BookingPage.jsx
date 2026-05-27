@@ -14,7 +14,7 @@ export default function BookingPage() {
   useEffect(() => {
     const fetchBooking = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/bookings/${id}`);
+        const response = await axios.get(`https://jam-cyus.onrender.com/bookings/${id}`);
         setBooking(response.data);
       } catch (err) {
         console.error("Error fetching booking:", err);
@@ -28,7 +28,7 @@ export default function BookingPage() {
   const handleCancelBooking = async () => {
     if (window.confirm("Are you sure you want to cancel this booking?")) {
       try {
-        await axios.post(`http://localhost:3000/bookings/${id}/cancel`);
+        await axios.post(`https://jam-cyus.onrender.com/bookings/${id}/cancel`);
         setBooking(prevBooking => ({ ...prevBooking, status: 'Cancelled' }));
         alert("Booking cancelled successfully");
         navigate("/account/bookings/"); // Navigate to PlacesPage after cancellation
